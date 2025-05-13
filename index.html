@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gabriel Cavañas - Tarjeta de Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0f4c81; /* Updated to a professional blue */
+            --accent-color: #e76f51; /* Updated to a more vibrant orange */
+            --text-light: #ffffff;
+            --text-dark: #1f2937;
+            --bg-light: #f9fafb;
+            --card-bg: #ffffff;
+        }
+        
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: var(--bg-light); 
+            color: var(--text-dark);
+        }
+        
+        .header {
+            background: var(--primary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 40px 20px 80px 20px;
+            position: relative;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            background: var(--text-light);
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .header h1 {
+            margin: 15px 0 5px 0;
+            font-size: 26px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            margin: 0;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .buttons a {
+            background: var(--card-bg);
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .buttons a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        
+        .add-contact {
+            background: var(--accent-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 15px;
+            margin: 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .add-contact:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .add-contact i {
+            margin-right: 8px;
+        }
+        
+        .info {
+            background: var(--card-bg);
+            margin: 20px;
+            padding: 24px;
+            border-radius: 16px;
+            font-size: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .info-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(15, 76, 129, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+        
+        .info-content {
+            flex-grow: 1;
+        }
+        
+        .info-content label {
+            display: block;
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        
+        .info-content p {
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #6b7280;
+            margin: 40px 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo-container">
+        <img src="public/images/voltex_profile.jpg" alt="Voltex Ingenieria Logo">
+    </div>
+    <h1>ING. Gabriel Cavañas</h1>
+    <p>Socio Gerente</p>
+</div>
+
+<div class="buttons">
+    <a href="tel:+542284227136" aria-label="Call"><i class="fas fa-phone"></i></a>
+    <a href="mailto:gabriel.cavanas@voltexingenieria.com.ar" aria-label="Email"><i class="fas fa-envelope"></i></a>
+</div>
+
+<a class="add-contact" href="contact.vcf" download>
+    <i class="fas fa-user-plus"></i> Añadir contacto
+</a>
+
+<div class="info">
+    <div class="info-item">
+        <div class="info-icon">
+            <i class="fas fa-phone"></i>
+        </div>
+        <div class="info-content">
+            <label>Teléfono</label>
+            <p>2284-227136</p>
+        </div>
+    </div>
+    <div class="info-item">
+        <div class="info-icon">
+            <i class="fas fa-envelope"></i>
+        </div>
+        <div class="info-content">
+            <label>E-mail</label>
+            <p>gabriel.cavanas@voltexingenieria.com.ar</p>
+        </div>
+    </div>
+    <div class="info-item">
+        <div class="info-icon">
+            <i class="fas fa-building"></i>
+        </div>
+        <div class="info-content">
+            <label>Empresa</label>
+            <p class="company">VOLTEX INGENIERIA</p>
+            <p>Socio Gerente</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    © 2025 Voltex Ingenieria - Todos los derechos reservados
+</div>
+
+</body>
+</html>
